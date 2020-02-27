@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+    src: url('@{slick-font-path}slick.eot');
+    src: url('@{slick-font-path}slick.eot?#iefix') format('embedded-opentype'), url('@{slick-font-path}slick.woff') format('woff'), url('@{slick-font-path}slick.ttf') format('truetype'), url('@{slick-font-path}slick.svg#slick') format('svg');
+}
+@import '../libs/slick/slick.less';
+@import '../libs/slick/slick-theme.less';
+@slick-loader-path: '../libs/slick/';
+@slick-font-path: '../libs/slick/fonts/';
+@slick-arrow-color: #7d7070;
+@post-wrapper--width: 400px;
+.ig-post-item{
+    overflow: hidden;
+}
+.slick{
+    .ig-post-item{
+        display: none;
+        img{
+            opacity: 0;
+            transition: all .3s ease-in-out;
+        }
+        &.slick-slide{
+            display: block;
+            img{
+                opacity: 1;
+            }
+        }
+    }
+}
+.ig-post-item--image{
+    img{
+        width: 100%;
+        transform: scale(1);
+    }
+    &:hover img{
+        transform: scale(1.05);
+    }
+}
+
+.modal-post{
+    position: fixed;
+    z-index: 999;
+    display: block;
+    top: 0; 
+    min-height: 100%;
+    right: 0;
+    left: 0;
+    background: rgba(82, 82, 82, 0.5);
+    z-index: 998;
+    .modal-close{
+        background: url('../images/modal-close.png');
+        height: 20px;
+        width: 20px;
+        display: block;
+        background-size: cover;
+        float: right;
+        cursor: pointer;
+    }
+}
+.post-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: @post-wrapper--width;
+    background: #fff;
+    padding: 15px;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+    &.show{
+        opacity: 1;
+    }
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+}
+.post-image-wrapper{
+    img{
+        width: 100%;
+    }
+}
+.post-owner--pic {
+    border-radius: 50%;
+    width: 30px;
+    margin-right: 5px;
+}
+.post-head{
+    padding-bottom: 15px;
+}
+.post-body{
+    padding: 15px 0;
+    white-space: pre-wrap;      /* CSS3 */   
+    white-space: -moz-pre-wrap; /* Firefox */    
+    white-space: -pre-wrap;     /* Opera <7 */   
+    white-space: -o-pre-wrap;   /* Opera 7 */    
+    word-wrap: break-word;      /* IE */
+}

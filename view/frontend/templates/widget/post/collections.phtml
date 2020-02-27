@@ -1,0 +1,17 @@
+<div data-mage-init='{"instagramPost": {}}' class="winkel-ig-posts slick">
+<?php foreach($block->getCollection() as $post): ?>
+    <a href="<?= $post->getUrl() ?>" 
+    data-mage-init='{"instagramPostItem": {"img":"<?= $block->getImageUrl($post->getThumb()) ?>",
+                                            "caption":"<?= preg_replace("/[\\n\\r]+/", "<br />",$post->getCaption()) ?>",
+                                            "profile_pic":"<?= $post->getProfilePic() ?>",
+                                            "owner":"<?= $post->getOwner() ?>",
+                                            "url":"<?= $post->getUrl(); ?>"
+                                            }}' 
+            class="ig-post-item">
+            <div class="ig-post-item--image">
+                <img src="<?= $block->getImageUrl($post->getThumb()); ?>" alt="">
+            </div>
+    </a>
+<?php endforeach ?>
+</div>
+<div id="popup-modal"></div>

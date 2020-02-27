@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Winkel_InstagramPost::instagram" title="Instagram" translate="title" module="Magento_Backend" sortOrder="30" parent="Magento_Backend::marketing" resource="Magento_Backend::content" />
+        <add id="Winkel_InstagramPost::instagram_posts" title="Manage Posts" translate="title" module="Winkel_InstagramPost" parent="Winkel_InstagramPost::instagram" sortOrder="1" action="wkinstagram/post/index" resource="Magento_Backend::content"/>
+   </menu>
+</config>
