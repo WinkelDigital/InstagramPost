@@ -21,8 +21,10 @@ class Collections extends Template implements BlockInterface
 
    public function getCollection(){
         $posts = $this->_postFactory->create();
-        $ids = $this->getData('ids');
-        $postData = $posts->getCollection();
+        $posts = $posts->getCollection();
+        if($this->getData('ids')){
+          $posts = $posts->addFieldToFilter('id',['in' => explode(',',$this->getData('ids'))]);
+        }
         return $posts;
    }
 

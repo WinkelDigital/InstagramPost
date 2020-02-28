@@ -54,14 +54,5 @@
                 </item>
             </argument>
         </field>
-        <htmlContent name="html_content">
-            <argument name="block" xsi:type="object">Winkel\InstagramPost\Block\Adminhtml\Post\Preview</argument>
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="source" xsi:type="string">instagram_post</item>
-                    <item name="dataScope" xsi:type="string">image</item>
-                </item>
-            </argument>
-        </htmlContent>
     </fieldset>
 </form>

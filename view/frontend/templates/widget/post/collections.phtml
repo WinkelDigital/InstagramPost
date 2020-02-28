@@ -7,7 +7,7 @@
                                             "owner":"<?= $post->getOwner() ?>",
                                             "url":"<?= $post->getUrl(); ?>"
                                             }}' 
-            class="ig-post-item">
+            class="ig-post-item post-<?= $post->getId() ?>">
             <div class="ig-post-item--image">
                 <img src="<?= $block->getImageUrl($post->getThumb()); ?>" alt="">
             </div>
